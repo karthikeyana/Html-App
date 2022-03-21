@@ -1,0 +1,214 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+body {
+  margin: 0;
+}
+
+.icon-bar {
+  width: 100%;
+  display: flex;
+}
+.icon-bar a {
+  background-color: gray;
+  width: 20%;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 8vw;
+}
+.icon-bar .active {
+  background-color: yellow;
+}
+.icon-bar a:hover {
+  background-color: greenyellow;
+}
+
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+  padding: 15px 20px;
+}
+.menu-icon .div1,
+.menu-icon .div2,
+.menu-icon .div3 {
+  width: 35px;
+  height: 5px;
+  background-color: gray;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+.menu-icon.change .div1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.menu-icon.change .div2 {
+  opacity: 0;
+}
+.menu-icon.change .div3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.accordion-container {
+  padding-bottom: 10px;
+}
+.accordion-container .accordion {
+  width: 100%;
+  text-align: left;
+  border: none;
+  padding: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.accordion-container .accordion .active, .accordion-container .accordion:hover {
+  background-color: khaki;
+}
+.accordion-container .accordion:after {
+  content: '\002B';
+  color: black;
+  margin-left: 5px;
+  float: right;
+}
+.accordion-container .active:after {
+  content: '\2212';
+}
+.accordion-container .panel {
+  display: none;
+  min-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.tab {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab button {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.grid-container {
+  margin: 10px 0px;
+  border: 2px solid tomato;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20px 20px 20px;
+  grid-auto-rows: 100px;
+  text-align: center;
+  grid-column-gap: 5px;
+  grid-gap: 5px;
+  grid-template-areas: "box2 box2 box2 box2 \a box4 box4 box4 box4";
+}
+.grid-container div:nth-child(odd) {
+  background-color: lightblue;
+}
+.grid-container div:nth-child(even) {
+  background-color: yellowgreen;
+}
+.grid-container .box0 {
+  grid-column: span 2;
+}
+.grid-container .box3 {
+  grid-row: span 2;
+}
+.grid-container .box1 {
+  grid-row: 1/4;
+}
+.grid-container .box5 {
+  grid-column: 2/4;
+}
+.grid-container .box2 {
+  grid-area: box2;
+}
+.grid-container .box4 {
+  grid-area: box4;
+}
+
+.parent {
+  width: 100px;
+  height: 100px;
+  border: 2px solid palevioletred;
+  position: relative;
+  margin: 10px 0;
+}
+.parent .child {
+  width: 20px;
+  height: 20px;
+}
+.parent .static {
+  background-color: khaki;
+  position: static;
+}
+.parent .relative {
+  background-color: #8c8ef0;
+  position: relative;
+  top: 0px;
+  left: 80px;
+}
+.parent .absolute {
+  background-color: #f08c94;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.parent .fixed {
+  background-color: #8cb7f0;
+  position: fixed;
+  top: 480px;
+  left: 0px;
+}
+.parent .sticky {
+  background-color: #f13f09;
+  position: sticky;
+  top: 0;
+}
+
+header, footer, section {
+  padding: 10px;
+  text-align: center;
+}
+
+header {
+  background-color: #8c8ef0;
+}
+
+footer {
+  background-color: #8c8ef0;
+}
+
+.flex-parent {
+  display: flex;
+  border: 5px solid black;
+}
+.flex-parent .menubar {
+  background-color: saddlebrown;
+  flex-basis: 100px;
+}
+.flex-parent .content {
+  background-color: lightgreen;
+  flex-grow: 1;
+}
+.flex-parent .sidebar {
+  background-color: mediumseagreen;
+  flex-basis: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */

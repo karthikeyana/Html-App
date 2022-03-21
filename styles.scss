@@ -1,0 +1,248 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body {
+  margin: 0;
+}
+
+// assignment 1
+
+.icon-bar {
+  width: 100%;
+  display: flex;
+
+  a {
+    background-color: gray;
+    width: 20%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 8vw;
+  }
+
+  .active {
+    background-color: yellow;
+  }
+
+  a:hover {
+    background-color: greenyellow;
+  }
+}
+
+// assignment 2
+
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+  padding: 15px 20px;
+
+  .div1,
+  .div2,
+  .div3 {
+    width: 35px;
+    height: 5px;
+    background-color: gray;
+    margin: 6px 0;
+    transition: 0.3s;
+  }
+
+  &.change {
+    .div1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .div2 {
+      opacity: 0;
+    }
+    .div3 {
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}
+
+// assignment 3
+
+.accordion-container {
+  padding-bottom: 10px;
+  .accordion {
+    width: 100%;
+    text-align: left;
+    border: none;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  
+    .active,
+    &:hover {
+      background-color: khaki;
+    }
+
+    &:after {
+        content: '\002B';
+        color: black;
+        margin-left: 5px;
+        float: right;
+      }
+  }
+
+  .active {
+    &:after {
+      content: '\2212';
+    }
+  }
+  .panel {
+    display: none;
+    min-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+// assignment 4
+
+.tab {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.tab button {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #ddd;
+    }
+  
+    &.active {
+        background-color: #ccc;
+    }
+}
+  
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+// assignment 5
+
+.grid-container {
+    margin: 10px 0px;
+    border: 2px solid tomato;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20px 20px 20px;
+    grid-auto-rows: 100px;
+    text-align: center;
+    grid-column-gap: 5px;
+    grid-gap:5px;
+    grid-template-areas: 
+    "box2 box2 box2 box2 \a
+    box4 box4 box4 box4";
+
+    & div:nth-child(odd){
+        background-color: lightblue;
+    }
+
+    & div:nth-child(even){
+        background-color: yellowgreen;
+    }
+
+    .box0 {
+        grid-column: span 2;
+    }
+
+    .box3 {
+        grid-row: span 2;
+    }
+   
+    .box1 {
+        grid-row: 1/4;
+    }
+    .box5 {
+        grid-column: 2/4;
+    }
+    .box2 {
+        grid-area:box2;
+    }
+    .box4 {
+        grid-area: box4;
+    }
+}
+
+// assignment 6
+
+.parent {
+    width: 100px;
+    height: 100px;
+    border: 2px solid palevioletred;
+    position: relative;
+    margin: 10px 0;
+    .child {
+        width: 20px;
+        height: 20px;
+    }
+    .static {
+        background-color: khaki;
+        position: static;
+    }
+    .relative {
+        background-color: #8c8ef0;
+        position: relative;
+        top:0px;
+        left:80px;
+    }
+    .absolute {
+        background-color: #f08c94;
+        position: absolute;
+        bottom:0;
+        right:0;
+    }
+    .fixed {
+        background-color: #8cb7f0;
+        position: fixed;
+        top:480px;
+        left:0px;
+    }
+    .sticky {
+        background-color: #f13f09;
+        position:sticky;
+        top:0;
+    }
+}
+
+// assignment 7
+
+header, footer, section {
+    padding:10px;
+    text-align: center;
+}
+header {
+    background-color: #8c8ef0;
+}
+footer {
+    background-color: #8c8ef0;
+}
+
+.flex-parent {
+    display: flex;
+    border: 5px solid black;
+    .menubar {
+        background-color: saddlebrown;
+        flex-basis:100px;
+    }
+    .content {
+        background-color: lightgreen;
+        flex-grow: 1;   
+    }
+    .sidebar {
+        background-color: mediumseagreen;
+        flex-basis: 100px;
+    }
+}
+
